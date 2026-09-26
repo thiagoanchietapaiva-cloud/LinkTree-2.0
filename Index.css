@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background: #0A0A0F;
+    min-height: 100dvh;
+    min-height: 100vh;
+    padding: 16px;
+    font-family: "Space Grotesk", sans-serif;
+    position: relative;
+    overflow-x: hidden
+}
+
+.bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background: radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.15) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(45, 212, 191, 0.12) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(15, 15, 20, 1) 0%, #0A0A0F 100%);
+    pointer-events: none
+}
+
+.conteiner {
+    position: relative;
+    z-index: 1;
+    width: min(90%, 420px);
+    max-width: 420px;
+    background: rgba(22, 22, 30, 0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: clamp(24px, 6vw, 32px) clamp(18px, 5vw, 28px);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03) inset, 0 20px 80px rgba(0, 0, 0, 0.8);
+    margin-top: clamp(10px, 4vh, 40px)
+}
+
+.image {
+    display: flex;
+    justify-content: center
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #2DD4BF, #0FB5A0);
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    box-shadow: 0 0 20px rgba(45, 212, 191, 0.3)
+}
+
+.image img {
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 2px solid #2DD4BF
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    margin-top: 20px;
+    color: #fff;
+    text-transform: uppercase
+}
+
+h1 .gradient {
+    background: linear-gradient(90deg, #8B5CF6 0%, #3B82F6 35%, #2DD4BF 70%, #34D399 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text
+}
+
+.username {
+    text-align: center;
+    margin: 14px auto 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #6B7280;
+    max-width: 260px
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 22px
+}
+
+ul a {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #9CA3AF;
+    text-decoration: none;
+    transition: all .2s;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px
+}
+
+ul a:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.15)
+}
+
+.divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.06);
+    margin: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative
+}
+
+.divider span {
+    background: #16161E;
+    padding: 0 10px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    color: #4B5563;
+    letter-spacing: 0.1em
+}
+
+.butons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.btn {
+    min-height: 52px;
+    border-radius: 12px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    transition: all .2s;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid transparent
+}
+
+.btn-primary {
+    background: #fff;
+    color: #000
+}
+
+.btn-primary:hover {
+    background: #f3f3f3;
+    transform: translateY(-1px)
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.1)
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.09);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px)
+}
+
+.btn-whatsapp {
+    background: rgba(255, 255, 255, 0.04);
+    color: #9CA3AF;
+    border-color: rgba(255, 255, 255, 0.08)
+}
+
+.btn-whatsapp:hover {
+    background: rgba(34, 197, 94, 0.08);
+    color: #22c55e;
+    border-color: rgba(34, 197, 94, 0.2)
+}
+
+.btn-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    font-weight: 700
+}
+
+.btn-primary .btn-icon {
+    background: #000;
+    color: #fff
+}
+
+.btn-secondary .btn-icon {
+    background: #2DD4BF;
+    color: #000
+}
+
+.btn-whatsapp .btn-icon {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e
+}
+
+.arrow {
+    opacity: 0.5;
+    font-size: 14px
+}
+
+.tag {
+    background: #fff;
+    color: #000;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-weight: 700
+}
+
+.online {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    color: #22c55e
+}
+
+.footer {
+    text-align: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    color: #3F3F46;
+    margin-top: 22px
+}
+
+@media(max-width:380px) {
+    .conteiner {
+        width: 100%;
+        border-radius: 16px
+    }
+}
+
+@media(min-width:768px) {
+    body {
+        align-items: center
+    }
+
+    .conteiner {
+        max-width: 420px
+    }
+}
